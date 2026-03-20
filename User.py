@@ -3,7 +3,7 @@ from calculator_agent import agent
 from langchain_core.messages import HumanMessage
 
 # Prepare the initial message
-human_message = HumanMessage(content="Hi , how are you?")
+human_message = HumanMessage(content="Divide 5 with 0")
 
 # Create an instance of the agent (the compiled graph)
 my_agent = agent()

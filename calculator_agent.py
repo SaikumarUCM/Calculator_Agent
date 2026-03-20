@@ -33,7 +33,7 @@ llm_with_tools = llm.bind_tools(tools, parallel_tool_calls=False)
 
 ## Let's create a simple node for defining the assistant behaviour.
 from langgraph.graph import MessagesState
-from langchain_core.messages import HumanMessage, SystemMessage
+from langchain_core.messages import SystemMessage
 
 sys_msg = SystemMessage(content= ' You are a helpful assistant tasked with performing arthimetic operations ')
 
@@ -46,7 +46,6 @@ def assistant_node(state: MessagesState):
 from langgraph.graph import StateGraph, START
 from langgraph.prebuilt import ToolNode
 from langgraph.prebuilt import tools_condition
-from IPython.display import Image, display
 
 def agent():
     builder = StateGraph(MessagesState)
